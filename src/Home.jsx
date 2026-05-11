@@ -18,11 +18,11 @@ export default function AdminDashboard() {
     { id: 'APP005', studentName: 'Sipho Mkhize', institution: 'Wits', status: 'approved', fundingStatus: 'NSFAS', date: '2024-01-11', documents: 4 },
   ]);
  
-  const [properties, setProperties] = useState([
-    { id: 'PROP001', name: 'Bryanston Heights', city: 'Johannesburg', totalRooms: 12, occupiedRooms: 8, monthlyRev: 'R24,000' },
-    { id: 'PROP002', name: 'Sandton Residences', city: 'Johannesburg', totalRooms: 20, occupiedRooms: 15, monthlyRev: 'R45,000' },
-    { id: 'PROP003', name: 'Woodstock Commons', city: 'Cape Town', totalRooms: 8, occupiedRooms: 5, monthlyRev: 'R12,500' },
-  ]);
+const [properties, setProperties] = useState([
+  { id: 'PROP001', name: 'Rocharl Property UJ Auckland Park Campus', city: 'Johannesburg', totalRooms: 12, occupiedRooms: 8, monthlyRev: 'R24,000' },
+  { id: 'PROP002', name: 'Rocharl Property North-West University Potchefstroom', city: 'Potchefstroom', totalRooms: 20, occupiedRooms: 15, monthlyRev: 'R45,000' },
+  { id: 'PROP003', name: 'Rocharl Property UJ Doornfontein Campus', city: 'Johannesburg', totalRooms: 10, occupiedRooms: 6, monthlyRev: 'R18,500' },
+]);
  
   const [leases, setLeases] = useState([
     { id: 'LS001', studentName: 'Amara Okafor', property: 'Bryanston Heights', status: 'signed', period: '2024-01-01 to 2024-12-31' },
@@ -45,12 +45,13 @@ export default function AdminDashboard() {
     { name: 'Private', value: 2, color: '#8b5cf6' },
   ];
  
-  const occupancyData = [
-    { name: 'Bryanston Heights', occupied: 8, available: 4 },
-    { name: 'Sandton Residences', occupied: 15, available: 5 },
-    { name: 'Woodstock Commons', occupied: 5, available: 3 },
-  ];
- 
+ const occupancyData = properties.map((prop) => ({
+  name: prop.name,
+  occupied: prop.occupiedRooms,
+  available: prop.totalRooms - prop.occupiedRooms,
+}));
+
+
   const applicationTrendData = [
     { month: 'Nov', applications: 12, approved: 8 },
     { month: 'Dec', applications: 18, approved: 12 },
