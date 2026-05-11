@@ -14,7 +14,7 @@ export default function AdminDashboard() {
     { id: 'APP001', studentName: 'Thabo Ndlela', institution: 'Wits', status: 'submitted', fundingStatus: 'NSFAS', date: '2024-01-15', documents: 3 },
     { id: 'APP002', studentName: 'Amara Okafor', institution: 'UP', status: 'approved', fundingStatus: 'Bursary', date: '2024-01-14', documents: 4 },
     { id: 'APP003', studentName: 'James Smith', institution: 'Stellenbosch', status: 'pending', fundingStatus: 'Cash', date: '2024-01-13', documents: 2 },
-    { id: 'APP004', studentName: 'Lisa Wong', institution: 'UCT', status: 'rejected', fundingStatus: 'Private', date: '2024-01-12', documents: 3 },
+    { id: 'APP004', studentName: 'Lisa Malato', institution: 'UCT', status: 'rejected', fundingStatus: 'Private', date: '2024-01-12', documents: 3 },
     { id: 'APP005', studentName: 'Sipho Mkhize', institution: 'Wits', status: 'approved', fundingStatus: 'NSFAS', date: '2024-01-11', documents: 4 },
   ]);
  
